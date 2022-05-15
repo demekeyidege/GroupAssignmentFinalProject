@@ -6,9 +6,9 @@
  <div class="card">
  <div class="card-header">{{ __('###########PLACE REGISTER Landowner INFORMARIION##########') }}</div>
  <div class="card-body">
- <form method="POST" action="{{ route('Landowner/register') }}"
->
+ <form method="POST" action="{{ route('Landowner/update') }}">
  @csrf
+ <input type="hidden" value="{{ $Landowner->id }}" name ='id'>
  <div class="form-group row">
  <label for="fname" class="col-md-4 col-formlabel text-md-right">{{ __('Frist_Name') }}</label>
  <div class="col-md-6">
