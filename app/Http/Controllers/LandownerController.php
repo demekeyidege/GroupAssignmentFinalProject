@@ -54,7 +54,7 @@ public function edit($id)
  public function update(Request $request)
  {
  //Validate
- $request->validate(['name' => 'required' ]);
+ $request->validate(['fname' => 'required' ]);
   $Landowner = Landowner::find($request->id);
   $Landowner->fname = $request->fname;
   $Landowner->lname = $request->lname;
@@ -71,7 +71,7 @@ public function edit($id)
   $Landowner->area = $request->area;
   $Landowner->parcelcode = $request->parcelcode;
   $Landowner->landlavel = $request->landlavel;
-  $product->save();
+  $Landowner->save();
   return redirect('Landowner/get_all');
   }
   public function delete($id)
