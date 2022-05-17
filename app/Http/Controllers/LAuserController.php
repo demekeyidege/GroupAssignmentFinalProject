@@ -36,5 +36,10 @@ class LAuserController extends Controller
        $LAuser = LAuser::all();
        return view('LAuser.get_all', compact('LAuser'));
       }
+      public function get_by_id($id)
+ {
+  $LAuser = LAuser::where('id', $id)->first();
+  return view('LAuser.search', compact('LAuser'));
+  }
       
 }
