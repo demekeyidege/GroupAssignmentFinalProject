@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\LAuser;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -10,18 +10,18 @@ class LAuserController extends Controller
     //
     public function register()
     {
-    return view('Users.register');
+    return view('LAuser.register');
     }
       function store(Request $request)
       
       {
-        $Users =new Users();
-        $Users->username = $request->username;
-        $Users->password = $request->password;
-        $Users->fname = $request->fname;
-        $Users->lname = $request->lname;
-        $Users->userType = $request->fname;
-       $is_saved = $Users->save();
+        $LAuser =new LAuser();
+        $LAuser->username = $request->username;
+        $LAuser->password = $request->password;
+        $LAuser->fname = $request->fname;
+        $LAuser->lname = $request->lname;
+        $LAuser->userType = $request->userType;
+       $is_saved = $LAuser->save();
       if($is_saved){
       echo "User account is Created SUCCESSFULLY.";
                  }

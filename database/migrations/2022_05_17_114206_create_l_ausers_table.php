@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('l_ausers', function (Blueprint $table) {
             $table->id();
+            $table->string('username');
+            $table->string('password');
+            $table->string('fname');
+            $table->string('lname');
+            $table->string('userType');
             $table->timestamps();
         });
     }
