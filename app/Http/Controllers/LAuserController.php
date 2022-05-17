@@ -31,4 +31,10 @@ class LAuserController extends Controller
   
          
       }
+      public function get_all()
+      {
+       $LAuser = LAuser::all();
+       return view('LAuser.get_all', compact('LAuser'));
+      }
+      
 }
