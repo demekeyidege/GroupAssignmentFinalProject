@@ -25,7 +25,7 @@ username" autofocus>
  <div class="form-group row">
  <label for="password" class="col-md-4 col-formlabel text-md-right">{{ __('Password') }}</label>
  <div class="col-md-6">
- <input id="password" type="text" class="formcontrol @error('password') isinvalid @enderror" name="password" value="{{ old('password') }}" required autocomplete
+ <input id="password" type="password" class="formcontrol @error('password') isinvalid @enderror" name="password" value="{{ old('password') }}" required autocomplete
 ="password">
  @error('Password')
  <span class="invalid-feedback" role="alert">
