@@ -36,7 +36,7 @@ class LandownerController extends Controller
       echo " LANDOWNER INFORMATION IS SAVED SUCCESSFULLY.";
                  }
       else{
-       echo "Sorry, try again something went wrong.";
+       echo "find try again.";
          }
   
          
